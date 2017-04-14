@@ -8,6 +8,7 @@ import {
   renderNothing,
 } from 'recompose';
 import { firebaseAuth } from '../config';
+import { setToken } from '../utils/messagingUtils';
 import Login from './Login';
 import User from './User';
 import { Button } from './styled';
@@ -20,6 +21,9 @@ const App = compose(
       firebaseAuth().onAuthStateChanged(auth => {
         this.props.updateAuth(auth);
         this.props.updateLoading(false);
+        if (auth) {
+          setToken(auth.uid);
+        }
       });
     },
   }),
