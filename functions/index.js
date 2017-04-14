@@ -20,7 +20,7 @@ function notify(uid, noti) {
           console.log(err);
         });
       },
-      1000 * 10
+      1000 * 5
     );
   });
 }
@@ -41,7 +41,7 @@ exports.notifyTest = functions.database
       notification: {
         title: 'Test Notification',
         body: 'Good news, your pwa is receiving notifications',
-        icon: 'http://firebase-app.now.sh/android-chrome-192x192.png'
+        icon: 'android-chrome-192x192.png'
       }
     });
   });

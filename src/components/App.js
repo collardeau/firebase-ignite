@@ -25,7 +25,7 @@ const Notify = ({ uid }) => (
     <div>
       Make sure the app is not visible to receive a test notification. One will be sent
       {' '}
-      <b>10 seconds</b> after a button click.
+      <b>5 seconds</b> after a button click.
     </div>
     <div>Not available while running on webpack dev server (npm run dev)</div>
   </div>
