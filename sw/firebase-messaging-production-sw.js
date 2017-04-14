@@ -10,7 +10,7 @@ const config = {
   authDomain: '',
   databaseURL: '',
   storageBucket: '',
-  messagingSenderId: '',
+  messagingSenderId: ''
 };
 
 firebase.initializeApp(config);

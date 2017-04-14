@@ -1,3 +1,4 @@
+/* eslint comma-dangle: ["error", "never"] */
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
