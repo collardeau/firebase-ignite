@@ -1,6 +1,6 @@
 import { messaging, ref } from '../config';
 
-const tokensRef = ref.child('tokens-fcm');
+const tokensRef = ref.child('tokens');
 const requestPermission = uid => {
   messaging
     .requestPermission()

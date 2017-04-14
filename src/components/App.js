@@ -7,11 +7,40 @@ import {
   lifecycle,
   renderNothing,
 } from 'recompose';
-import { firebaseAuth } from '../config';
+import { firebaseAuth, ref } from '../config';
 import { setToken } from '../utils/messagingUtils';
 import Login from './Login';
 import User from './User';
 import { Button } from './styled';
+
+const Notify = ({ uid }) => (
+  <div>
+    <Button
+      onClick={() => {
+        ref.child('notify-test').push({ uid });
+      }}
+    >
+      Notify Me
+    </Button>
+    <div>
+      Make sure the app is not visible to receive a test notification. One will be sent
+      {' '}
+      <b>10 seconds</b> after a button click.
+    </div>
+  </div>
+);
+
+const Logout = () => (
+  <div>
+    <Button
+      onClick={() => {
+        firebaseAuth().signOut();
+      }}
+    >
+      Logout
+    </Button>
+  </div>
+);
 
 const App = compose(
   withState('auth', 'updateAuth', null),
@@ -34,13 +63,9 @@ const App = compose(
     <h3>Logged In User</h3>
     <User uid={auth.uid} />
     <hr />
-    <Button
-      onClick={() => {
-        firebaseAuth().signOut();
-      }}
-    >
-      Logout
-    </Button>
+    <Notify uid={auth.uid} />
+    <hr />
+    <Logout />
   </div>
 ));
 
