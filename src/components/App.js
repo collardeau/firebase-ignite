@@ -27,6 +27,7 @@ const Notify = ({ uid }) => (
       {' '}
       <b>10 seconds</b> after a button click.
     </div>
+    <div>Not available while running on webpack dev server (npm run dev)</div>
   </div>
 );
 

@@ -60,8 +60,8 @@ const User = compose(
   branch(props => !props.user, renderComponent(() => <div>No user match</div>)),
 )(({ user }) => (
   <section>
-    <div>email: {user.email || 'unknown email'}</div>
-    <div>uid: {user.uid || 'unknown uid'}</div>
+    <div><b>email</b>: {user.email || 'unknown email'}</div>
+    <div><b>uid</b>: {user.uid || 'unknown uid'}</div>
     <div>
       <h5>Avatar</h5>
       {user.avatar && <img src={user.avatar} alt="avatar" width="50%" />}
