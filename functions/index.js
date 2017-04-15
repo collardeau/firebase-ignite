@@ -15,6 +15,7 @@ function notify(uid, noti) {
     if (!data) return;
     const tokens = Object.keys(data);
     setTimeout(
+      // delay for testing
       () => {
         messaging.sendToDevice(tokens, noti).catch(err => {
           console.log(err);
