@@ -42,7 +42,8 @@ exports.notifyTest = functions.database
       notification: {
         title: 'Test Notification',
         body: 'Good news, your pwa is receiving notifications',
-        icon: 'android-chrome-192x192.png'
+        icon: 'android-chrome-192x192.png',
+        click_action: 'https://google.com'
       }
     });
   });
