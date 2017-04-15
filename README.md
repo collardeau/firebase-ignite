@@ -81,12 +81,16 @@ Be sure you've deployed the cloud functions first (see above).
 `npm run dev` runs a webpack dev server with live reload,
  point your browser to `localhost:8080`.
 
-(The staging env is used with `npm run dev`. PWA capacities are disabled to avoid caching, this can be tested on a staging deployment).
+(The staging env is used with `npm run dev`. PWA capacity is disabled to avoid caching, it can be tested on a staging deployment).
 
 ## Test Drive
 
-Once you run the app, you'll see some demo of the firebase integration. You'll be able to register/login (auth), save an avatar photo (storage), and send yourself notifications (messaging / cloud functions).
+Once you run the app, you'll see a demo of the firebase integration. You'll be able to register/login (auth), save an avatar photo (storage), and send yourself notifications (messaging / cloud functions).
 
-The view layer uses React (with Recompose) but feel free to use what best strikes your fancy :)
+The UI uses React (with Recompose) with an HTML app shell, but feel free to use what best strikes your fancy :)
 
 Check the cloud functions logs in the firebase console.
+
+## Code Architecture
+
+WIP
