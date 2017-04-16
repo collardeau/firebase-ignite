@@ -26,6 +26,7 @@ exports.notifyTest = functions.database
     const data = event.data.val();
     const { uid } = data;
     return Promise.resolve()
+      .then(delay) // allow user to put app in bg for self-notification
       .then(() => tokensRef.child(uid).once('value'))
       .then(tokensSnap => {
         if (!tokensSnap.exists()) return Promise.reject('User has no tokens');
@@ -39,6 +40,5 @@ exports.notifyTest = functions.database
           }
         });
       })
-      .then(delay) // allow user to put app in bg for self-notification
       .catch(console.warn);
   });
