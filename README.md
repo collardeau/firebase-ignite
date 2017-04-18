@@ -5,7 +5,7 @@ A Firebase boilerplate for the Web: with auth, storage, messaging and cloud func
 
 #### Get started
 
-Clone the repo:`git clone https://github.com/collardeau/firebase-ignite.git my-new-app`
+Clone or fork the repo: `https://github.com/collardeau/firebase-ignite.git`
 
 #### Install Dependencies
 
@@ -18,18 +18,18 @@ login to firebase if you haven't already:
 
 install the local npm dependencies:
 
-`npm install` and in the root folder and the `functions` folder as well.
+`npm install` in the root folder and the `functions` folder as well.
 
 #### Set up Firebase
 
 There are two environments to ready: `staging` and `production`.
 
 - create 2 new firebase apps (for instance: `my-app-production` and `my-app-staging`)
-see https://firebase.google.com
+at https://firebase.google.com
 
 - enable sign-in method for email/password for both (in the firebase console)
 
-Now, **plug in the app configs** in the following places:
+Now, **edit in the configs** in the following places:
 
 - `src/config.js`
 - `sw/firebase-messaging-staging.js`
@@ -59,8 +59,6 @@ The UI uses React (with Recompose) with an app shell, but that's just to demo. `
 
 Check the cloud functions logs in the firebase console.
 
-Good luck!
-
 ## Deploy
 
 #### Static Web App
@@ -86,7 +84,6 @@ Then, simply:
 
 and optionally return to the staging env for safety:
 `firebase use staging`
-
 
 ## Code Architecture
 
