@@ -7,32 +7,27 @@ const Login = compose(
   withState('email', 'updateEmail', ''),
   withState('pw', 'updatePw', ''),
   withHandlers({
-    onEmailChange: ({ updateEmail }) =>
-      e => {
-        updateEmail(e.target.value);
-      },
-    onPwChange: ({ updatePw }) =>
-      e => {
-        updatePw(e.target.value);
-      },
-    reset: ({ updateEmail, updatePw }) =>
-      () => {
-        updateEmail('');
-        updatePw('');
-      },
+    onEmailChange: ({ updateEmail }) => e => {
+      updateEmail(e.target.value);
+    },
+    onPwChange: ({ updatePw }) => e => {
+      updatePw(e.target.value);
+    },
+    reset: ({ updateEmail, updatePw }) => () => {
+      updateEmail('');
+      updatePw('');
+    }
   }),
   withHandlers({
-    onLogin: ({ email, pw, reset }) =>
-      () => {
-        login(email, pw, console.warn);
-        reset();
-      },
-    onRegister: ({ email, pw, reset }) =>
-      () => {
-        registerWithEmail(email, pw, console.warn);
-        reset();
-      },
-  }),
+    onLogin: ({ email, pw, reset }) => () => {
+      login(email, pw, console.warn);
+      reset();
+    },
+    onRegister: ({ email, pw, reset }) => () => {
+      registerWithEmail(email, pw, console.warn);
+      reset();
+    }
+  })
 )(({ email, pw, onEmailChange, onPwChange, onLogin, onRegister }) => (
   <div>
     <Input

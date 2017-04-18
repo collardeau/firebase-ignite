@@ -1,4 +1,3 @@
-/* eslint comma-dangle: 0 */
 const { Observable: Obs } = require('rxjs');
 
 function getNotify$(uid, ref, messaging) {

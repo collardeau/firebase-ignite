@@ -5,7 +5,7 @@ import {
   branch,
   renderComponent,
   lifecycle,
-  renderNothing,
+  renderNothing
 } from 'recompose';
 import { firebaseAuth, ref } from '../config';
 import { setToken } from '../utils/messagingUtils';
@@ -55,10 +55,10 @@ const App = compose(
           setToken(auth.uid);
         }
       });
-    },
+    }
   }),
   branch(props => props.loading, renderNothing),
-  branch(props => !props.auth, renderComponent(Login)),
+  branch(props => !props.auth, renderComponent(Login))
 )(({ auth }) => (
   <div>
     <h3>Logged In User</h3>

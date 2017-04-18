@@ -5,7 +5,7 @@ const stagingConfig = {
   authDomain: '',
   databaseURL: '',
   storageBucket: '',
-  messagingSenderId: '',
+  messagingSenderId: ''
 };
 
 const prodConfig = {
@@ -13,7 +13,7 @@ const prodConfig = {
   authDomain: '',
   databaseURL: '',
   storageBucket: '',
-  messagingSenderId: '',
+  messagingSenderId: ''
 };
 
 const isProd = process.env.NODE_ENV === 'production';

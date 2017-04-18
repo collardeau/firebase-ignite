@@ -1,4 +1,3 @@
-/* eslint-disable */
 const webpack = require('webpack');
 const config = require('./webpack.config.js');
 const CopyWebpackPlugin = require('copy-webpack-plugin');

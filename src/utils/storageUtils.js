@@ -14,6 +14,6 @@ export const uploadFile = (file, cb) => {
     },
     () => {
       cb(task.snapshot.downloadURL);
-    },
+    }
   );
 };

@@ -10,7 +10,7 @@ export const Button = props => (
       backgroundColor: '#666',
       border: 'none',
       minWidth: '100px',
-      color: '#fff',
+      color: '#fff'
     }}
     {...props}
   />
@@ -22,7 +22,7 @@ export const Input = props => (
       display: 'block',
       width: '89%',
       padding: '0.5em',
-      margin: '0.5em 0',
+      margin: '0.5em 0'
     }}
     {...props}
   />

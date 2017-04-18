@@ -1,4 +1,3 @@
-/* eslint-disable */
 const webpack = require('webpack');
 const OfflinePlugin = require('offline-plugin');
 const config = require('./webpack.config.js');

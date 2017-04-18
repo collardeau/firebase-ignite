@@ -1,4 +1,3 @@
-/* eslint-disable */
 const webpack = require('webpack');
 const Dashboard = require('webpack-dashboard/plugin');
 const config = require('./webpack.config.js');
