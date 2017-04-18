@@ -37,7 +37,7 @@ Now, **edit in the configs** in the following places:
 
 Finally, <b>alias your projects</b>, `staging` and `production` respectively, with:
 
-`firebase use -add`
+`firebase use --add`
 
 You're ignited and ready to go.
 
