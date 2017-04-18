@@ -18,6 +18,7 @@ module.exports = {
     'no-console': 0,
     'no-mixed-operators': 0,
     'prefer-template': 0,
+    'global-require': 0,
     'space-before-function-paren': 0,
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': 0,
