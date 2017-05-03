@@ -15,7 +15,9 @@ config.plugins.push(
       to: 'firebase-messaging-sw.js'
     }
   ]),
-  new OfflinePlugin()
+  new OfflinePlugin({
+    responseStrategy: 'network-first'
+  })
 );
 
 module.exports = config;
